@@ -1,0 +1,14 @@
+{
+  "name": "testPolymer",
+  "authors": [
+    "Kenrick Guie <kguie@franklyinc.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.3.0"
+  }
+}
