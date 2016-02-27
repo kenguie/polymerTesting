@@ -6,10 +6,18 @@
 			color: green;
 		}
 	</style>
-	<template>
-		<h1>Hello World!</h1>
+	<template name="{{name}}">
+		<h1>Hello {{name}}</h1>
 	</template>
 	<script>
-		Polymer({});
+		Polymer({
+			is: 'hello-world',
+				properties: {
+					name: String
+				},
+				hostAttributes: {
+					name: 'World!'
+				}
+		});
 	</script>
 </dom-module>
