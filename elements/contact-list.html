@@ -1,55 +1,53 @@
 <link rel="import" type="text/css" href="../bower_components/polymer/polymer.html">
 
 <dom-module name="contact-list">
-	<style type="text/css">
-		ul {
-			list-style: none;
-		}
-		li {
-			display: flex;
-			width: 50%;
-		}
-		li img {
-			border-radius: 50%;
-			margin-right: 10px;
-			height: 100px;
-		}
-		h3 {
-			margin-right: 10px;
-			line-height: 100px;
-		}
-		li span {
-			margin-top: 15px;
-			line-height: 100px;
-		}
-		li+li {
-			border-top: 1px solid black;
-			padding-top: 30px;
-		}
-
-	</style>
-	<template>
-		<ul>
-			<li>
-				<img src="http://science.dodlive.mil/files/2012/04/Lucas-FACE.jpg" alt="robot face">
-				<h3>Scott</h3>
-				<span>scott@abc.com</span>
-			</li>
-			<li>
-				<img src="http://science.dodlive.mil/files/2012/04/Lucas-FACE.jpg" alt="robot face">
-				<h3>Tim</h3>
-				<span>tim@abc.com</span>
-			</li>
-			<li>
-				<img src="http://science.dodlive.mil/files/2012/04/Lucas-FACE.jpg" alt="robot face">
-				<h3>Ben</h3>
-				<span>ben@abc.com</span>
-			</li>
-		</ul>
-	</template>
-	<script>
-		Polymer({
-			is: 'contact-list'
-		});
-	</script>
+    <style type="text/css">
+	    ul {
+	        list-style: none;
+	    }
+	    li+li {
+            border-top: 1px solid black;
+            padding-top: 30px;
+        }
+        li {
+        	width: 50%;
+        }
+    </style>
+    <template>
+        <ul>
+            <template is="dom-repeat" items="{{contacts}}">
+                <li>
+					<contact-listing 
+						name="{{item.name}}"
+						email="{{item.email}}"
+						img="{{item.img}}">
+					</contact-listing>
+                </li>
+            </template>
+        </ul>
+    </template>
+    <script>
+    Polymer({
+        is: 'contact-list',
+        ready: function() {
+            this.contacts = [{
+                name: "Scott",
+                email: "scott@abc.com",
+                img: "http://science.dodlive.mil/files/2012/04/Lucas-FACE.jpg"
+            }, {
+                name: "Tim",
+                email: "tim@abc.com",
+                img: "http://science.dodlive.mil/files/2012/04/Lucas-FACE.jpg"
+            }, {
+                name: "Ben",
+                email: "ben@abc.com",
+                img: "http://science.dodlive.mil/files/2012/04/Lucas-FACE.jpg"
+            }, {
+                name: "Bob",
+                email: "bob@abc.com",
+                img: "http://science.dodlive.mil/files/2012/04/Lucas-FACE.jpg"
+            }]
+        }
+    });
+    </script>
 </dom-module>

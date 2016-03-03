@@ -1,0 +1,42 @@
+<link rel="import" type="text/css" href="../bower_components/polymer/polymer.html">
+
+<dom-module name="contact-listing">
+    <style type="text/css">
+        .listing-wrapper {
+            display: flex;
+        }
+        
+        .listing-wrapper img {
+            border-radius: 50%;
+            margin-right: 10px;
+            height: 100px;
+        }
+        
+        .listing-wrapper h3 {
+            margin-right: 10px;
+            line-height: 100px;
+        }
+        
+        .listing-wrapper span {
+            margin-top: 15px;
+            line-height: 100px;
+        }
+    </style>
+    <template>
+        <div class="listing-wrapper">
+            <img src="{{img}}" alt="robot face">
+            <h3>{{name}}</h3>
+            <span>{{email}}</span>
+        </div>
+    </template>
+    <script>
+    Polymer({
+        is: 'contact-listing',
+        properties: {
+            name: String,
+            email: String,
+            img: String
+        }
+    });
+    </script>
+</dom-module>
