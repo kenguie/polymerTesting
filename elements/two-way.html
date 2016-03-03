@@ -1,0 +1,39 @@
+<link rel="import" type="text/css" href="../bower_components/polymer/polymer.html">
+
+<dom-module name="two-way">
+	<style type="text/css">
+		h1 {
+			color: green;
+		}
+	</style>
+	<template>
+		<input type="text" value="{{inputValue::input}}"></input>
+		<h1>{{inputValue}}</h1>
+	</template>
+	<script>
+		Polymer({
+			is: 'two-way',
+			properties: {
+				firstName: {
+					type: String,
+					value: 'Ken'
+				},
+				lastName: {
+					type: String,
+					value: 'G'
+				},
+				fullName: {
+					type: String,
+					computed: 'computeFullName(firstName, lastName)'
+				},
+				inputValue: {
+					value: ''
+				}
+			},
+
+			computeFullName: function(firstName, lastName) {
+				return firstName + ' ' + lastName;
+			}
+		});
+	</script>
+</dom-module>
