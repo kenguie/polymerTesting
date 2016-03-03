@@ -14,8 +14,14 @@
 		Polymer({
 			is: 'name-out',
 			properties: {
-				firstName: String,
-				lastName: String,
+				firstName: {
+					type: String,
+					value: 'Ken'
+				},
+				lastName: {
+					type: String,
+					value: 'G'
+				},
 				fullName: {
 					type: String,
 					computed: 'computeFullName(firstName, lastName)'
