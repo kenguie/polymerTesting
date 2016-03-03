@@ -8,6 +8,18 @@
 	hello-world::shadow h1 {
 		color: blue;
 	}
+
+	tool-box::shadow .purple {
+		background-color: purple !important;
+	}
+
+	tool-box::shadow .orange {
+		background-color: orange !important;
+	}
+
+	tool-box::shadow .gray {
+		background-color: gray !important;
+	}
 </style>
 
 <style type="text/css">
@@ -15,10 +27,11 @@
 		color: red;
 	}
 </style>
-
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="import" href="elements/hello-world.html">
+	<link rel="import" href="elements/tool-box.html">
 	<link rel="import" href="bower_components/google-map/google-map.html">
 
 </head>
@@ -26,9 +39,23 @@
 	<hello-world name="Ken"></hello-world>
 	<h1>Just a regular H1</h1>
 	<hello-world></hello-world>
-	<hello-world></hello-world>
-	<hello-world></hello-world>
+	<tool-box></tool-box>
+	<tool-box></tool-box>
+	<tool-box></tool-box>
+	<tool-box></tool-box>
 
-	<google-map latitude="40.7141667" longitude="-74.0063889"></google-map>
+	<google-map latitude="40.7141667" longitude="-74.0063889">
+		<google-map-marker latitude="40.7141667" longitude="-74.0063889" title="NY" draggable="true"></google-map-marker>
+	</google-map>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('tool-box:nth-of-type(2)').find('#CDEV-toolbox').addClass('orange');
+		$('tool-box:nth-of-type(3)').find('#CDEV-toolbox').addClass('gray');
+		$('tool-box:last').find('#CDEV-toolbox').addClass('purple');
+	});
+</script>
+
 </body>
 </html>

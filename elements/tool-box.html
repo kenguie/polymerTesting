@@ -1,0 +1,153 @@
+<link rel="import" type="text/css" href="../bower_components/polymer/polymer.html">
+
+<dom-module name="tool-box">
+
+	<style type="text/css">
+		#CDEV-toolbox {
+			background-color: #AA061D;
+			width: 300px;
+		}
+
+		#CDEV-toolbox ul {
+			margin-top: 0px;
+			display: block;
+			padding: 11px;
+		}
+
+		#CDEV-toolbox li {
+			display: inline-block;
+			width: 85px;
+			height: 95px;
+			margin-left: 5px;
+		}
+
+		#CDEV-toolbox li a {
+			display: block;
+			height: 60px;
+			width: 78px;
+			background-image: url("http://ftpcontent.worldnow.com/professionalservices/clients/wsil/toolbox.png");
+			background-repeat: no-repeat;
+			background-color: #AA061D;
+		}
+
+		#CDEV-toolbox li a:hover {
+			background-image: url("http://ftpcontent.worldnow.com/professionalservices/clients/wsil/toolBoxOnOff.png");
+		}
+
+		#CDEV-toolbox li a span {
+			margin-top: 78px;
+			position: absolute;
+			font-weight: bold;
+			color: #fff;
+			font-size: 13px;
+			font-weight: bold;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		#CDEV-toolbox li a.whatsOn span {
+			left: 25px;
+		}
+
+		#CDEV-toolbox li a.whatsOn {
+			background-position: -19px -6px;
+		}
+
+		#CDEV-toolbox li a.apps span {
+			left: 130px;
+		}
+
+		#CDEV-toolbox li a.apps {
+			background-position: -117px -4px;
+		}
+
+		#CDEV-toolbox li a.links span {
+			left: 224px;
+		}
+		#CDEV-toolbox li a.links {
+			background-position: -218px -6px;
+		}
+
+		#CDEV-toolbox li a.tips span {
+			left: 25px;
+		}
+
+		#CDEV-toolbox li a.tips {
+			background-position: -17px -95px;
+		}
+
+		#CDEV-toolbox li a.contests span {
+			left: 125px;
+		}
+
+		#CDEV-toolbox li a.contests {
+			background-position: -117px -89px;
+		}
+
+		#CDEV-toolbox li a.closings span {
+			left: 218px;
+		}
+		#CDEV-toolbox li a.closings {
+			background-position: -220px -93px;
+		}
+
+		#CDEV-toolbox li a.whatsOn:hover {
+			background-position: -12px -224px;
+		}
+
+		#CDEV-toolbox li a.apps:hover {
+			background-position: -110px -222px;
+		}
+
+		#CDEV-toolbox li a.links:hover {
+			background-position: -211px -224px;
+		}
+
+		#CDEV-toolbox li a.tips:hover {
+			background-position: -10px -313px;
+		}
+
+		#CDEV-toolbox li a.contests:hover {
+			background-position: -110px -307px;
+		}
+
+		#CDEV-toolbox li a.closings:hover {
+			background-position: -213px -311px;
+		}
+
+	</style>
+
+	<template>
+		
+		<div id="CDEV-toolbox">
+			<ul>
+				<li class="odd">
+					<a title="WhatsOn" class="whatsOn" href="/category/304856/whats-on"><span>What's On</span></a>
+				</li>
+				<li class="even">
+					<a title="Apps" class="apps" href="/story/30190437/apps"><span>Apps</span></a>
+				</li>
+				<li class="odd">
+					<a title="Links" class="links" href="/story/30190426/links"><span>Links</span></a>
+				</li>
+			</ul>
+			<ul>
+				<li class="odd">
+					<a title="NewsTips" class="tips" href="/category/304955/contact-us"><span>News Tips</span></a>
+				</li>
+				<li class="even">
+					<a title="Contests" class="contests" href="/category/304961/contests"><span>Contests</span></a>
+				</li>
+				<li class="odd">
+					<a title="Closings" class="closings" href="/story/30110420/closings"><span>Closings</span></a>
+				</li>
+			</ul>
+		</div>
+
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: 'tool-box'
+	});
+</script>
